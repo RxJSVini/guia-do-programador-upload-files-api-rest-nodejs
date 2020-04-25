@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const pug = require('pug');
-const port = 3002;
+const port = 3000;
 
 require('./database');
 

@@ -3,15 +3,16 @@ const User = require('../models/Users');
 class UserController {
     //GET
     async index(req, res) {
-        const users = await User.find({})
+        const users = await Users.find({})
 
         return res.json(users)
     }
 
 
+
     //POST
     async store(req, res) {
-        const user = await User.create(req.body)
+        const user = await Users.create(req.body)
         return res.json({ user: user.getJson() })
 
     }

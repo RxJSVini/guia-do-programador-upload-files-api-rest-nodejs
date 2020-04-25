@@ -7,7 +7,7 @@ class SessionController {
     async store(req, res) {
         const { email, password } = req.body;
 
-        const user = await User.findOne({ email });
+        const user = await Users.findOne({ email });
 
         if (!user) {
             return res.json({ error: 'Usuário não encontrado' })

@@ -18,6 +18,14 @@ const UserSchema = new mongoose.Schema({
     role: { type: String, default: 'user' }
 
 }, {
+    recovery: {
+        type: {
+            token: String,
+            date: Date
+        },
+        default: {}
+    }
+}, {
     timestamps: true
 });
 
